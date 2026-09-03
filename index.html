@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Agro Hub | Farm Fresh</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+<nav>
+    <h1>Agro Hub</h1>
+
+    <ul>
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Shop</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+
+    <button class="login-btn">Login</button>
+</nav>
+
+
+    <!-- Hero Section -->
+    <section class="hero">
+
+        <div class="hero-text">
+            <h2 >AGRO HUB</h2>
+            <p>FRESH FROM THE FARM</p>
+
+            <p>Healthy Food,<br>Straight From Our Farm</p>
+
+            <p>
+                We provide fresh, quality farm produce grown with care
+                and delivered from our farm to your table.
+            </p>
+
+            <button>Explore Our Products</button>
+        </div>
+
+        <div class="hero-image">
+            <img src="images/farming.jpg" alt="Farmer watering crops">
+        </div>
+
+    </section>
+
+
+    <!-- Why Choose Us -->
+    <section class="features">
+
+        <h2>Why Choose Us?</h2>
+
+        <div class="feature-container">
+
+            <div class="feature">
+                <h3>🌱 Fresh Produce</h3>
+                <p>
+                    Fresh vegetables and fruits carefully grown on our farm.
+                </p>
+            </div>
+
+            <div class="feature">
+                <h3>🚜 Sustainable Farming</h3>
+                <p>
+                    We use responsible farming methods that care for the land.
+                </p>
+            </div>
+
+            <div class="feature">
+                <h3>🥕 Farm Fresh</h3>
+                <p>
+                    Quality farm products brought directly to our customers.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Featured Products -->
+    <section class="products">
+
+        <p>OUR FARM PRODUCTS</p>
+
+        <h2>Fresh From Our Farm</h2>
+
+        <div class="product-container">
+
+            <div class="product-card">
+                <div class="product-image">🥕</div>
+                <h3>Fresh Vegetables</h3>
+                <p>Fresh and healthy vegetables from our farm.</p>
+                <button>Explore</button>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">🍎</div>
+                <h3>Fresh Fruits</h3>
+                <p>Sweet and natural fruits harvested with care.</p>
+                <button>Explore</button>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">🍯</div>
+                <h3>Farm Goods</h3>
+                <p>Quality farm products made with natural ingredients.</p>
+                <button>Explore</button>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- About the Farm -->
+    <section class="farm-intro">
+
+        <div>
+            <p>ABOUT OUR FARM</p>
+
+            <h2>From Our Land<br>To Your Table</h2>
+
+            <p>
+                AgroLink connects customers with fresh farm produce.
+                Our goal is to make quality food easier to access while
+                supporting farmers and sustainable agriculture.
+            </p>
+
+            <button>Learn More</button>
+        </div>
+
+    </section>
+
+
+    <!-- Final Call To Action -->
+    <section class="cta">
+
+        <h2>Fresh Food. Better Farming.</h2>
+
+        <p>
+            Bringing fresh, natural farm produce closer to you.
+        </p>
+
+        <button>Explore Products</button>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+    <div class="footer-top">
+
+        <div class="footer-brand">
+            <h2>Agro Hub</h2>
+
+            <p>
+                Agro Hub brings fresh vegetables, fruits, and farm products
+                straight from our farms to your table.
+            </p>
+
+            <div class="newsletter">
+                <input type="email" placeholder="Email address">
+                <button>Submit</button>
+            </div>
+        </div>
+
+
+        <div class="footer-column">
+            <h3>Stay Connected</h3>
+            <p>Follow us for fresh farm updates and news.</p>
+        </div>
+
+
+        <div class="footer-column">
+            <h3>Navigation</h3>
+
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Shop</a>
+            <a href="#">Contact</a>
+        </div>
+
+
+        <div class="footer-column">
+            <h3>Shop Categories</h3>
+
+            <a href="#">Vegetables</a>
+            <a href="#">Fruits</a>
+            <a href="#">Farm Goods</a>
+        </div>
+
+
+        <div class="footer-column">
+            <h3>Contact Us</h3>
+
+            <p>hello@agrohub.com</p>
+            <p>+234 800 000 0000</p>
+            <p>Nigeria</p>
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <p>© 2026 Agro Hub. All rights reserved.</p>
+
+        <p>Fresh from the farm to your table.</p>
+
+    </div>
+
+</footer>
+
+<script>
+    const navLinks = document.querySelectorAll("nav ul li a");
+
+    navLinks.forEach(function(link) {
+        link.addEventListener("click", function() {
+
+            navLinks.forEach(function(item) {
+                item.classList.remove("active");
+            });
+
+            this.classList.add("active");
+        });
+    });
+</script>
+
+</body>
+</html>
