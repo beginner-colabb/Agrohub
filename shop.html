@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Golden Field | All Products</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Dark Top Navbar -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <h1 class="logo">
+        <a href="index.html" class="logo-link">🌾 Golden Field</a>
+      </h1>
+      <nav class="nav-links">
+        <a href="index.html" class="active">Home</a>
+        <a href="#">About</a>
+        <a href="index.html">Shop</a>
+        <a href="#">Contact</a>
+      </nav>
+      <a href="cart.html" id="cart-btn" class="cart-button">
+        🛍️ <span id="cart-count" class="badge">0</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Main Store Section -->
+  <main class="container store-body">
+    
+    <!-- Left Sidebar -->
+<!-- index.html -->
+    <aside class="sidebar">
+      <h3>Browse by</h3>
+      <ul id="category-list">
+        <li class="category-item active" data-category="all">All products</li>
+        <li class="category-item" data-category="apparel">Apparel</li>
+        <li class="category-item" data-category="skincare">Skincare & Home</li>
+        <li class="category-item" data-category="accessories">Accessories</li>
+      </ul>
+    </aside>
+
+    <!-- Main Content Area -->
+    <section class="shop-content">
+      
+      <!-- Top Control Bar -->
+      <!-- Inside index.html -->
+      <div class="shop-header">
+        <div>
+          <h2>All products</h2>
+          <span class="product-count">12 products</span>
+        </div>
+
+        <div class="controls-wrapper">
+          <!-- Search Bar -->
+          <div class="search-wrapper">
+            <input 
+              type="text" 
+              id="search-input" 
+              placeholder="Search products..." 
+              autocomplete="off"
+            >
+          </div>
+
+          <!-- Sort Dropdown -->
+          <div class="sort-wrapper">
+            <label for="sort-select">Sort by</label>
+            <select id="sort-select" class="sort-dropdown">
+              <option value="default">Default</option>
+              <option value="low-high">Price: Low to High</option>
+              <option value="high-low">Price: High to Low</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- Grid -->
+      <div id="product-grid" class="product-grid"></div>
+
+    </section>
+  </main>
+
+  <div id="toast-container" class="toast-container"></div>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Golden Field | Checkout</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Dark Top Navbar -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <h1 class="logo">
+        <a href="index.html" class="logo-link">🌾 Golden Field</a>
+      </h1>
+      <a href="cart.html" class="back-link-head">&larr; Back to Cart</a>
+    </div>
+  </header>
+
+  <!-- Checkout Container -->
+  <main class="checkout-page-container">
+    <div class="checkout-grid">
+      
+      <!-- Left Column: Shipping Form -->
+      <section class="checkout-form-card">
+        <h2 class="form-title">Shipping Information</h2>
+        
+        <form id="checkout-form">
+          <div class="form-group">
+            <label for="customer-name">Full Name</label>
+            <input type="text" id="customer-name" placeholder="Jane Doe" required>
+          </div>
+
+          <div class="form-group">
+            <label for="customer-email">Email Address</label>
+            <input type="email" id="customer-email" placeholder="jane@example.com" required>
+          </div>
+
+          <div class="form-group">
+            <label for="customer-phone">Phone Number</label>
+            <input type="tel" id="customer-phone" placeholder="+1 (555) 000-0000" required>
+          </div>
+
+          <div class="form-group">
+            <label for="customer-address">Shipping Address</label>
+            <textarea id="customer-address" rows="3" placeholder="Street address, city, state, zip" required></textarea>
+          </div>
+
+          <button type="submit" class="btn-gold btn-full mt-4">
+            Complete Order
+          </button>
+        </form>
+      </section>
+
+      <!-- Right Column: Order Summary -->
+      <aside class="checkout-summary-card">
+        <h3>Order Summary</h3>
+        <div id="summary-items-list" class="summary-items-list">
+          <!-- Rendered via JS -->
+        </div>
+
+        <div class="summary-divider"></div>
+
+        <div class="summary-total-row">
+          <span>Total:</span>
+          <span id="checkout-total-amount">$0.00</span>
+        </div>
+      </aside>
+
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

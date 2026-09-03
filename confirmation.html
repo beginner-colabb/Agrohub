@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Golden Field | Order Confirmation</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Dark Top Navbar -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <h1 class="logo">
+        <a href="index.html" class="logo-link">🌾 Golden Field</a>
+      </h1>
+      <a href="index.html" class="back-link-head">Storefront</a>
+    </div>
+  </header>
+
+  <!-- Confirmation Container -->
+  <main class="confirmation-page-container">
+    <div class="confirmation-card">
+      <div class="success-badge">✓</div>
+      <h2>Thank You for Your Order!</h2>
+      <p class="confirmation-sub">We've received your order and are preparing it for shipment.</p>
+
+      <div class="receipt-box">
+        <div class="receipt-header">
+          <span id="receipt-order-id">Order #000000</span>
+          <span id="receipt-date">MM/DD/YYYY</span>
+        </div>
+
+        <div class="receipt-section">
+          <h4>Shipping To</h4>
+          <p id="receipt-customer-name">Customer Name</p>
+          <p id="receipt-customer-address">Address Line</p>
+          <p id="receipt-customer-phone">Phone Number</p>
+        </div>
+
+        <div class="receipt-section">
+          <h4>Items Ordered</h4>
+          <div id="receipt-items-list" class="summary-items-list">
+            <!-- Items rendered via JS -->
+          </div>
+        </div>
+
+        <div class="summary-divider"></div>
+
+        <div class="receipt-total-row">
+          <span>Total Paid</span>
+          <span id="receipt-total-amount">$0.00</span>
+        </div>
+      </div>
+
+      <a href="index.html" class="btn-gold btn-full btn-inline mt-4">
+        Continue Shopping
+      </a>
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

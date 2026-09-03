@@ -1,0 +1,577 @@
+/* Color Palette */
+:root {
+  --bg-main: #fdfbf7;
+  --header-bg: #1c180e;
+  --header-text: #ffffff;
+  --accent-gold: #d49a00;
+  --accent-gold-hover: #b88400;
+  --card-bg: #ffffff;
+  --text-dark: #222222;
+  --text-muted: #777777;
+  --border-color: #e5e0d8;
+  --radius-card: 16px;
+  --radius-btn: 12px;
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--text-dark);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  margin: 0;
+}
+
+/* Dark Header */
+.navbar {
+  background-color: rgba(0,0,0,0.25);
+  padding: 0 40px;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  left: 0;
+  color: var(--header-text);
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 64px;
+}
+
+.logo-link {
+  color: var(--header-text);
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 24px;
+}
+
+.nav-links a {
+  color: #cccccc;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.nav-links a.active, .nav-links a:hover {
+  color: var(--header-text);
+}
+
+.cart-button {
+  color: var(--header-text);
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+/* Page Layout */
+.store-body {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+/* Sidebar */
+.sidebar h3 {
+  font-size: 0.9rem;
+  color: var(--text-dark);
+  margin-bottom: 12px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  border-top: 1px solid var(--border-color);
+  padding-top: 12px;
+}
+
+.sidebar li {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  cursor: pointer;
+}
+
+.sidebar li.active {
+  color: var(--text-dark);
+  font-weight: 600;
+}
+
+/* Header & Controls */
+.shop-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 24px;
+}
+
+.shop-header h2 {
+  font-size: 1.75rem;
+  margin: 0 0 4px 0;
+}
+
+.product-count {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.sort-wrapper {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.sort-dropdown {
+  padding: 6px 12px;
+  border-radius: 20px;
+  border: 1px solid var(--border-color);
+  background-color: var(--bg-main);
+  font-size: 0.85rem;
+  margin-left: 6px;
+}
+
+/* Product Grid */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.product-image {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: var(--radius-card);
+  background-color: #eee;
+  margin-bottom: 12px;
+}
+
+.product-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin: 0 0 4px 0;
+}
+
+.product-price {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+}
+
+/* Golden Add to Bag Button */
+.btn-gold {
+  background-color: var(--accent-gold);
+  color: #ffffff;
+  border: none;
+  padding: 10px 0;
+  width: 100%;
+  border-radius: var(--radius-btn);
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.btn-gold:hover {
+  background-color: var(--accent-gold-hover);
+}
+
+@media (max-width: 900px) {
+  .store-body {
+    grid-template-columns: 1fr;
+  }
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ==========================================================================
+   GOLDEN FIELD CART PAGE STYLES
+   ========================================================================== */
+
+.cart-page-container {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.cart-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 28px;
+  color: var(--text-dark);
+}
+
+.cart-page-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 32px;
+  align-items: start;
+}
+
+.cart-page-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.cart-page-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-card);
+  padding: 20px 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+}
+
+.cart-page-item-info h4 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 4px;
+}
+
+.cart-page-item-info p {
+  color: var(--text-muted);
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+.order-summary-box {
+  background-color: #ffffff;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-card);
+  padding: 28px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+}
+
+.order-summary-box h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: var(--text-dark);
+}
+
+.summary-row.total {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 8px;
+}
+
+.shipping-note {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+}
+
+@media (max-width: 800px) {
+  .cart-page-wrapper {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================================================
+   GOLDEN FIELD CHECKOUT STYLES
+   ========================================================================== */
+
+.back-link-head {
+  color: #cccccc;
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: color 0.2s ease;
+}
+
+.back-link-head:hover {
+  color: #ffffff;
+}
+
+.checkout-page-container {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.checkout-grid {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 32px;
+  align-items: start;
+}
+
+.checkout-form-card,
+.checkout-summary-card {
+  background-color: #ffffff;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-card);
+  padding: 32px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+}
+
+.form-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+  color: var(--text-dark);
+}
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 0.9rem;
+  background-color: var(--bg-main);
+  color: var(--text-dark);
+  font-family: inherit;
+  transition: all 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--accent-gold);
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(212, 154, 0, 0.15);
+}
+
+.checkout-summary-card h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: var(--text-dark);
+}
+
+.summary-items-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.summary-item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.88rem;
+  color: var(--text-muted);
+}
+
+.summary-item span:last-child {
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.summary-divider {
+  height: 1px;
+  background-color: var(--border-color);
+  margin: 20px 0;
+}
+
+.summary-total-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.mt-4 {
+  margin-top: 16px;
+}
+
+.btn-full {
+  width: 100%;
+}
+
+@media (max-width: 800px) {
+  .checkout-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================================================
+   GOLDEN FIELD CONFIRMATION / RECEIPT STYLES
+   ========================================================================== */
+
+.confirmation-page-container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.confirmation-card {
+  background-color: #ffffff;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-card);
+  padding: 36px;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+}
+
+.success-badge {
+  width: 56px;
+  height: 56px;
+  background-color: #f3eae0;
+  color: var(--accent-gold);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0 auto 16px auto;
+}
+
+.confirmation-card h2 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 6px;
+}
+
+.confirmation-sub {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  margin-bottom: 24px;
+}
+
+.receipt-box {
+  background-color: var(--bg-main);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 24px;
+  text-align: left;
+  margin-bottom: 24px;
+}
+
+.receipt-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  padding-bottom: 12px;
+  border-bottom: 1px dashed var(--border-color);
+  margin-bottom: 16px;
+}
+
+.receipt-section {
+  margin-bottom: 16px;
+}
+
+.receipt-section h4 {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  letter-spacing: 0.04em;
+  margin-bottom: 6px;
+}
+
+.receipt-section p {
+  font-size: 0.88rem;
+  color: var(--text-dark);
+  line-height: 1.4;
+}
+
+.receipt-total-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.btn-inline {
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+}
+
+/* Sidebar Items */
+.sidebar ul li {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  cursor: pointer;
+  padding: 6px 0;
+  transition: color 0.2s ease;
+}
+
+.sidebar ul li:hover {
+  color: var(--text-dark);
+}
+
+.sidebar ul li.active {
+  color: var(--text-dark);
+  font-weight: 700;
+}
+
+/* Controls Group */
+.controls-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Search Bar Styles */
+.search-wrapper input {
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: 1px solid var(--border-color);
+  background-color: var(--bg-main);
+  font-size: 0.85rem;
+  color: var(--text-dark);
+  outline: none;
+  transition: all 0.2s ease;
+  width: 180px;
+}
+
+.search-wrapper input:focus {
+  border-color: var(--accent-gold);
+  background-color: #ffffff;
+  width: 220px;
+  box-shadow: 0 0 0 3px rgba(212, 154, 0, 0.12);
+}
+
+@media (max-width: 640px) {
+  .shop-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .controls-wrapper {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .search-wrapper input {
+    width: 100%;
+  }
+}

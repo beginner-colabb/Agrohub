@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Golden Field | Shopping Cart</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Dark Top Navbar -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <h1 class="logo">
+        <a href="index.html" class="logo-link">🌾 Golden Field</a>
+      </h1>
+      <a href="index.html" class="back-link-head">&larr; Continue Shopping</a>
+    </div>
+  </header>
+
+  <!-- Main Cart Container -->
+  <main class="cart-page-container">
+    <h2 class="cart-title">Your Shopping Bag</h2>
+
+    <div class="cart-page-wrapper">
+      <!-- Left Column: Cart Items -->
+      <section class="cart-items-section">
+        <div id="cart-page-items" class="cart-page-list">
+          <!-- Rendered via JS -->
+        </div>
+      </section>
+
+      <!-- Right Column: Order Summary -->
+      <aside class="cart-summary-section">
+        <div class="order-summary-box">
+          <h3>Order Overview</h3>
+          <div class="summary-row total">
+            <span>Subtotal</span>
+            <span id="cart-page-total">$0.00</span>
+          </div>
+          <p class="shipping-note">Taxes and shipping calculated at checkout.</p>
+
+          <a href="checkout.html" style="text-decoration: none;">
+            <button id="cart-proceed-btn" type="button" class="btn-gold btn-full mt-4">
+              Proceed to Checkout
+            </button>
+          </a>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
