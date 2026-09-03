@@ -1,4 +1,4 @@
-// --- 1. STOREFRONT PAGE (index.html) ---
+// --- 1. STOREFRONT PAGE (shop.html) ---
 // Sample products assigned to Golden Field categories
 const products = [
   { id: 1, name: "Classic Cap", price: 5000.00, category: "apparel", image: "https://images.unsplash.com/photo-1588850561407-ed78c282e89b?w=500&q=80" },
@@ -52,13 +52,14 @@ function renderProducts() {
     <div class="product-card">
       <img src="${product.image}" alt="${product.name}" class="product-image">
       <h3 class="product-title">${product.name}</h3>
-      <p class="product-price">$${product.price.toFixed(2)}</p>
+      <p class="product-price">₦${product.price.toFixed(2)}</p>
       <button id="add-btn-${product.id}" onclick="addToCart(${product.id})" class="btn-gold">
         Add to bag
       </button>
     </div>
   `).join('');
 }
+
 
 // Always pull fresh cart state from localStorage
 function getCart() {
@@ -189,7 +190,7 @@ function renderCartPage() {
   const cart = getCart();
   const totalPrice = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
   
-  if (cartTotal) cartTotal.textContent = `$${totalPrice.toFixed(2)}`;
+  if (cartTotal) cartTotal.textContent = `₦${totalPrice.toFixed(2)}`;
 
   if (cart.length === 0) {
     cartList.innerHTML = `<p class="empty-cart-msg">Your shopping cart is empty.</p>`;
@@ -211,7 +212,7 @@ function renderCartPage() {
     <div class="cart-page-item">
       <div class="cart-page-item-info">
         <h4>${item.name}</h4>
-        <p>$${item.price.toFixed(2)}</p>
+        <p>₦${item.price.toFixed(2)}</p>
       </div>
       <div class="qty-controls">
         <button onclick="changeQuantity(${item.id}, -1)" class="qty-btn">-</button>
@@ -246,7 +247,7 @@ function initCheckoutPage() {
 
   // ONLY redirect if you are on checkout.html with 0 items
   if (cart.length === 0) {
-    window.location.href = 'index.html';
+    window.location.href = 'shop.html';
     return;
   }
 
@@ -259,12 +260,12 @@ function initCheckoutPage() {
     summaryList.innerHTML = cart.map(item => `
       <div class="summary-item">
         <span>${item.name} (x${item.quantity})</span>
-        <span>$${(item.price * item.quantity).toFixed(2)}</span>
+        <span>₦${(item.price * item.quantity).toFixed(2)}</span>
       </div>
     `).join('');
   }
 
-  if (summaryTotal) summaryTotal.textContent = `$${totalPrice.toFixed(2)}`;
+  if (summaryTotal) summaryTotal.textContent = `₦${totalPrice.toFixed(2)}`;
 
   form.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -295,7 +296,7 @@ function initConfirmationPage() {
 
   const latestOrder = JSON.parse(localStorage.getItem('latest_order'));
   if (!latestOrder) {
-    window.location.href = 'index.html';
+    window.location.href = 'shop.html';
     return;
   }
 
@@ -304,12 +305,12 @@ function initConfirmationPage() {
   document.getElementById('receipt-customer-name').textContent = latestOrder.customer.name;
   document.getElementById('receipt-customer-address').textContent = latestOrder.customer.address;
   document.getElementById('receipt-customer-phone').textContent = latestOrder.customer.phone;
-  document.getElementById('receipt-total-amount').textContent = `$${latestOrder.totalAmount.toFixed(2)}`;
+  document.getElementById('receipt-total-amount').textContent = `₦${latestOrder.totalAmount.toFixed(2)}`;
 
   document.getElementById('receipt-items-list').innerHTML = latestOrder.items.map(item => `
     <div class="summary-item">
       <span>${item.name} x ${item.quantity}</span>
-      <span>$${(item.price * item.quantity).toFixed(2)}</span>
+      <span>₦${(item.price * item.quantity).toFixed(2)}</span>
     </div>
   `).join('');
 }
