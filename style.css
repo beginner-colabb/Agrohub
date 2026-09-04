@@ -1,0 +1,893 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================
+   GLOBAL STYLES
+========================= */
+
+body {
+    font-family: Arial, sans-serif;
+    color: #26351f;
+    background-color: #f8f7ef;
+}
+
+
+button {
+    border: none;
+    background-color: #315c2b;
+    color: white;
+    padding: 14px 28px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+
+button:hover {
+    background-color: #21431d;
+    transform: translateY(-3px);
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+nav {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 7%;
+    background-color: #ffffff;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+
+nav h1 {
+    font-size: 28px;
+    color: #315c2b;
+}
+
+
+nav ul {
+    display: flex;
+    gap: 30px;
+    margin-left: auto;
+    list-style: none;
+}
+
+
+nav ul li a {
+    display: inline-block;
+    text-decoration: none;
+    color: #26351f;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+
+nav ul li a:hover {
+    color: #315c2b;
+    transform: translateY(-3px);
+}
+
+
+nav ul li a.active {
+    text-decoration: underline;
+    text-underline-offset: 6px;
+    text-decoration-thickness: 2px;
+}
+
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 1px;
+}
+
+
+.logo img {
+    height: 50px;
+    width: auto;
+    margin-right: 10px;
+}
+
+
+.logo h1 {
+    display: inline-block;
+    font-size: 28px;
+    color: #315c2b;
+    vertical-align: middle;
+}
+
+
+/* LOGIN BUTTON */
+
+.login-btn {
+    margin-left: 25px;
+    padding: 10px 22px;
+    font-size: 15px;
+}
+
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero {
+    width: 100%;
+    height: 100vh;
+    min-height: 600px;
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+}
+
+
+/* HERO IMAGE */
+
+.hero-image {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    z-index: 1;
+}
+
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    display: block;
+
+    animation: heroZoom 1.5s ease-out;
+}
+
+
+/* DARK OVERLAY */
+
+.hero-image::after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background-color: rgba(0, 0, 0, 0.45);
+}
+
+
+/* HERO TEXT */
+
+.hero-text {
+    width: 80%;
+    max-width: 900px;
+
+    text-align: center;
+
+    position: relative;
+    z-index: 2;
+
+    color: white;
+}
+
+
+.hero-label {
+    display: block;
+
+    font-size: 150px;
+    font-weight: bold;
+
+    letter-spacing: 4px;
+    text-transform: uppercase;
+
+    color: #d9f2c7;
+
+    margin-bottom: 15px;
+}
+
+
+.hero-description {
+    max-width: 650px;
+
+    margin: 0 auto 30px;
+
+    font-size: 16px;
+    line-height: 1.7;
+
+    color: #f5f5f5;
+}
+
+
+/* CONTACT HERO */
+
+.contact-hero {
+    height: 500px;
+    min-height: 500px;
+}
+
+
+.contact-hero .hero-text h2 {
+    font-size: 80px;
+}
+
+
+/* HERO ANIMATION */
+
+@keyframes heroZoom {
+
+    from {
+        transform: scale(1.15);
+    }
+
+    to {
+        transform: scale(1);
+    }
+
+
+}
+
+
+/* =========================
+   FEATURES
+========================= */
+
+.features {
+    padding: 80px 7%;
+    text-align: center;
+    background-color: white;
+}
+
+
+.features h2 {
+    font-size: 38px;
+    margin-bottom: 45px;
+}
+
+
+.feature-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+
+.feature {
+    flex: 1;
+    padding: 30px;
+}
+
+
+.feature h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+
+.feature p {
+    line-height: 1.6;
+    color: #666;
+}
+
+
+/* =========================
+   PRODUCTS
+========================= */
+
+.products {
+    padding: 80px 7%;
+    text-align: center;
+}
+
+
+.section-label {
+    color: #527a45;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+
+.products h2 {
+    font-size: 40px;
+    margin: 15px 0 45px;
+}
+
+
+.product-container {
+    display: flex;
+    gap: 30px;
+}
+
+
+.product-card {
+    flex: 1;
+
+    background-color: white;
+
+    padding-bottom: 30px;
+
+    border-radius: 10px;
+    overflow: hidden;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+
+.product-image {
+    height: 200px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #e8ead8;
+
+    font-size: 80px;
+}
+
+
+.product-card h3 {
+    margin: 25px 0 10px;
+    font-size: 23px;
+}
+
+
+.product-card p {
+    padding: 0 25px;
+
+    margin-bottom: 20px;
+
+    color: #666;
+    line-height: 1.5;
+}
+
+
+/* =========================
+   FARM INTRO
+========================= */
+
+.farm-intro {
+    min-height: 450px;
+
+    padding: 80px 7%;
+
+    display: flex;
+    align-items: center;
+
+    background-color: #dce5d2;
+}
+
+
+.farm-intro div {
+    max-width: 600px;
+}
+
+
+.farm-intro h2 {
+    font-size: 45px;
+    margin: 15px 0;
+}
+
+
+.farm-intro p {
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+
+/* =========================
+   CALL TO ACTION
+========================= */
+
+.cta {
+    padding: 100px 20px;
+
+    text-align: center;
+
+    background-color: #315c2b;
+    color: white;
+}
+
+
+.cta h2 {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+
+.cta p {
+    margin-bottom: 25px;
+}
+
+
+.cta button {
+    background-color: white;
+    color: #315c2b;
+}
+
+
+/* =========================
+   CONTACT PAGE
+========================= */
+
+.contact-section {
+    min-height: 600px;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    padding: 75px 20px;
+
+    background-color: #f7f5ed;
+    color: #252525;
+}
+
+
+.contact-container {
+    width: 100%;
+    max-width: 700px;
+
+    text-align: center;
+}
+
+
+.contact-container h1 {
+    font-size: 52px;
+    font-weight: 500;
+
+    margin-bottom: 20px;
+}
+
+
+.contact-container>p {
+    font-size: 19px;
+    color: #555;
+
+    margin-bottom: 45px;
+}
+
+
+/* CONTACT FORM */
+
+.newsletter-form {
+    width: 100%;
+    max-width: 500px;
+
+    margin: auto;
+
+    text-align: left;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+.newsletter-form label {
+    font-size: 17px;
+    margin-bottom: 8px;
+}
+
+
+.newsletter-form input {
+    width: 100%;
+    height: 50px;
+
+    padding: 0 20px;
+
+    border: 1px solid #315c2b;
+    border-radius: 30px;
+
+    outline: none;
+
+    font-size: 16px;
+
+    background-color: transparent;
+}
+
+
+.newsletter-form button {
+    width: 135px;
+    height: 58px;
+
+    margin: 28px auto;
+
+    border-radius: 35px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    padding: 70px 8% 25px;
+
+    background-color: #183d20;
+    color: white;
+}
+
+
+.footer-top {
+    max-width: 1300px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        2fr 1fr 1fr 1fr 1.2fr;
+
+    gap: 50px;
+}
+
+
+/* FOOTER BRAND */
+
+.footer-brand h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+
+.footer-brand p {
+    max-width: 350px;
+
+    color: #d8e6d5;
+    line-height: 1.7;
+}
+
+
+/* FOOTER COLUMNS */
+
+.footer-column h3 {
+    font-size: 16px;
+
+    margin-bottom: 20px;
+
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+
+.footer-column a {
+    display: block;
+
+    margin-bottom: 12px;
+
+    color: #d8e6d5;
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+
+.footer-column a:hover {
+    color: white;
+    transform: translateX(4px);
+}
+
+
+.footer-column p {
+    margin-bottom: 10px;
+
+    color: #d8e6d5;
+    line-height: 1.7;
+}
+
+
+/* =========================
+   FOOTER NEWSLETTER
+========================= */
+
+.newsletter {
+    display: flex;
+
+    max-width: 400px;
+
+    margin-top: 25px;
+}
+
+
+.newsletter input {
+    flex: 1;
+
+    padding: 13px;
+
+    border: none;
+    outline: none;
+
+    font-size: 14px;
+}
+
+
+.newsletter button {
+    padding: 13px 20px;
+    border-radius: 0;
+}
+
+
+/* =========================
+   FOOTER BOTTOM
+========================= */
+
+.footer-bottom {
+    margin-top: 60px;
+    padding-top: 25px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    color: #c9d8c6;
+    font-size: 14px;
+}
+
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 992px) {
+
+    .feature-container,
+    .product-container {
+        flex-wrap: wrap;
+    }
+
+
+    .feature,
+    .product-card {
+        min-width: 250px;
+    }
+
+
+    .footer-top {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 768px) {
+
+    nav {
+        height: auto;
+
+        flex-wrap: wrap;
+
+        gap: 20px;
+
+        padding: 20px 7%;
+    }
+
+
+    nav ul {
+        order: 3;
+
+        width: 100%;
+
+        justify-content: center;
+
+        margin-left: 0;
+
+        gap: 20px;
+    }
+
+
+    .login-btn {
+        margin-left: auto;
+    }
+
+
+    .hero {
+        min-height: 600px;
+    }
+
+
+    .hero-text h2 {
+        font-size: 48px;
+    }
+
+
+    .contact-hero .hero-text h2 {
+        font-size: 55px;
+    }
+
+
+    .feature-container,
+    .product-container {
+        flex-direction: column;
+    }
+
+
+    .contact-container h1 {
+        font-size: 40px;
+    }
+
+
+    .footer-top {
+        grid-template-columns: 1fr;
+    }
+
+
+    .footer-bottom {
+        flex-direction: column;
+
+        gap: 15px;
+
+        text-align: center;
+    }
+
+
+    .newsletter {
+        flex-direction: column;
+    }
+
+
+    .newsletter input,
+    .newsletter button {
+        width: 100%;
+    }
+
+
+    .newsletter button {
+        margin-top: 10px;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    nav h1 {
+        font-size: 24px;
+    }
+
+
+    nav ul {
+        gap: 15px;
+    }
+
+
+    .hero-text h2 {
+        font-size: 38px;
+    }
+
+
+    .hero-description {
+        font-size: 16px;
+    }
+
+
+    .products h2,
+    .features h2,
+    .farm-intro h2,
+    .cta h2 {
+        font-size: 32px;
+    }
+
+}
+<!--moses css session-->
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 300px;
+    place-items: center;
+    background-image: url("/agrohub/img/image.png");
+}
+
+.container1 {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 700px;
+    justify-content: center;
+}
+
+.container2 {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: 300px;
+    background-color: #0a581b;
+}
+
+#C01 {
+    color: rgb(247, 249, 246);
+    font-size: 50px;
+}
+
+h1#F01 {
+    margin-top: 30px;
+    text-align: center;
+}
+
+p#F02 {
+    margin-top: 5px;
+    text-align: center;
+}
+
+input {
+    width: 400px;
+    height: 50px;
+    margin-top: 10px;
+    border-radius: 50px;
+    border: 1px solid #0a581b;
+}
+
+textarea {
+    width: 400px;
+    height: 100px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 2px solid #0a581b;
+}
+
+.button_container {
+    display: grid;
+    place-content: center;
+    margin-top: 70px;
+}
+
+button {
+    width: 150px;
+    height: 50px;
+    border-radius: 50px;
+    background-color: #0a581b;
+    color: white;
+    border: none;
+}
+
+.centered-form {
+    display: grid;
+    justify-content: center;
+}
+
+.form_group {
+    margin-top: 15px;
+}
+
+strong {
+    margin-top: 10px;
+}
+
+#D01 {
+    margin-top: 30px;
+    padding-left: 25px;
+    color: #64a071;
+}
+
+.D02 {
+    margin-top: 15px;
+    padding-left: 25px;
+    text-align: left;
+    color: #e1e6e2;
+}
