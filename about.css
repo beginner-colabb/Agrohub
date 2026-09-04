@@ -1,0 +1,876 @@
+/* 
+   GENERAL STYLING
+ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f8f9ed;
+    color: #171717;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+
+/* 
+   THIS IS MY NAVIGATION BAR
+*/
+
+.navbar {
+    height: 112px;
+    width: 100%;
+
+    background-color: #111700;
+
+    color: white;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 55px;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 1000;
+}
+
+
+/* LOGO */
+
+.logo {
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+
+    font-size: 40px;
+    font-weight: 400;
+}
+
+.logo-icon {
+    font-size: 40px;
+}
+
+
+/* NAV LINKS */
+
+.nav-links {
+    margin-left: auto;
+
+    display: flex;
+    align-items: center;
+
+    gap: 60px;
+}
+
+.nav-links a {
+    font-size: 25px;
+
+    position: relative;
+
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #d6a900;
+}
+
+
+/* ACTIVE LINK */
+
+.nav-links .active::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -10px;
+
+    width: 100%;
+    height: 2px;
+
+    background-color: white;
+}
+
+
+/* CART */
+
+.cart {
+    margin-left: 70px;
+
+    font-size: 32px;
+
+    transition: 0.3s;
+}
+
+.cart:hover {
+    transform: scale(1.1);
+}
+
+
+/* =====================================
+   HERO SECTION
+===================================== */
+
+.hero {
+    height: 470px;
+
+    background-image:
+        url("https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=2000&q=85");
+
+    background-size: cover;
+    background-position: center;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* DARK OVERLAY */
+
+.hero-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background-color: rgba(0, 0, 0, 0.42);
+}
+
+
+/* HERO TEXT */
+
+.hero-content {
+    position: relative;
+
+    z-index: 2;
+
+    color: white;
+
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 110px;
+
+    font-weight: 400;
+}
+
+
+/* =====================================
+   ABOUT SECTION
+===================================== */
+
+.about-section {
+    padding: 120px 32px 100px;
+
+    background-color: #f8f9ed;
+}
+
+
+/* ABOUT CONTAINER */
+
+.about-container {
+    max-width: 1500px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 100px;
+}
+
+
+/* TITLE */
+
+.about-title h2 {
+    font-size: 65px;
+
+    line-height: 1.15;
+
+    font-weight: 400;
+}
+
+.about-title h2 span {
+    font-weight: 500;
+}
+
+
+/* TEXT */
+
+.about-text {
+    font-size: 25px;
+
+    line-height: 1.65;
+}
+
+.about-text p {
+    margin-bottom: 25px;
+}
+
+
+/* =====================================
+   VALUES
+===================================== */
+
+.values {
+    max-width: 1500px;
+
+    margin: 100px auto 0;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 70px;
+}
+
+
+/* VALUE BOX */
+
+.value-box {
+    padding: 10px 0;
+}
+
+.value-icon {
+    color: #d3a600;
+
+    font-size: 45px;
+
+    margin-bottom: 20px;
+}
+
+.value-box h3 {
+    font-size: 32px;
+
+    font-weight: 400;
+
+    margin-bottom: 15px;
+}
+
+.value-box p {
+    font-size: 21px;
+
+    line-height: 1.5;
+}
+
+
+/* =====================================
+   HOW WE GROW SECTION
+===================================== */
+
+.grow-section {
+    padding: 110px 32px;
+
+    background-color: #f8f9ed;
+}
+
+.grow-section h2 {
+    text-align: center;
+
+    font-size: 70px;
+
+    font-weight: 400;
+
+    margin-bottom: 80px;
+}
+
+
+/* IMAGE GRID */
+
+.grow-images {
+    max-width: 1800px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 40px;
+}
+
+
+/* IMAGE */
+
+.grow-image {
+    height: 500px;
+
+    overflow: hidden;
+
+    border-radius: 15px;
+}
+
+.grow-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 0.5s ease;
+}
+
+.grow-image:hover img {
+    transform: scale(1.05);
+}
+
+
+/* =====================================
+   FARM IMAGE SECTION
+===================================== */
+
+.farm-image-section {
+    padding: 0 32px 100px;
+
+    background-color: #f8f9ed;
+}
+
+.farm-image {
+    max-width: 1800px;
+
+    height: 630px;
+
+    margin: auto;
+
+    overflow: hidden;
+
+    border-radius: 15px;
+}
+
+.farm-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+/* =====================================
+   CALL TO ACTION
+===================================== */
+
+.cta-section {
+    height: 680px;
+
+    background-image:
+        url("https://images.unsplash.com/photo-1500076656116-558758c991c1?auto=format&fit=crop&w=2000&q=85");
+
+    background-size: cover;
+    background-position: center;
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    color: white;
+}
+
+
+/* OVERLAY */
+
+.cta-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background-color: rgba(0, 0, 0, 0.45);
+}
+
+
+/* CTA CONTENT */
+
+.cta-content {
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 1000px;
+}
+
+.cta-content h2 {
+    font-size: 65px;
+
+    line-height: 1.25;
+
+    font-weight: 500;
+
+    margin-bottom: 30px;
+}
+
+.cta-content p {
+    font-size: 25px;
+
+    margin-bottom: 50px;
+}
+
+
+/* CTA BUTTON */
+
+.cta-button {
+    display: inline-block;
+
+    background-color: #d9a900;
+
+    color: white;
+
+    padding: 22px 85px;
+
+    border-radius: 50px;
+
+    font-size: 23px;
+
+    transition: 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #b78d00;
+
+    transform: translateY(-3px);
+}
+
+
+/* =====================================
+   FOOTER
+===================================== */
+
+.footer {
+    background-color: #111700;
+
+    color: white;
+
+    padding: 80px 32px 50px;
+}
+
+
+.footer-container {
+    max-width: 1800px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 100px;
+}
+
+
+/* =====================================
+   NEWSLETTER
+===================================== */
+
+.newsletter h3 {
+    font-size: 32px;
+
+    margin-bottom: 45px;
+}
+
+.newsletter label {
+    display: block;
+
+    font-size: 23px;
+
+    margin-bottom: 10px;
+}
+
+
+/* EMAIL */
+
+.newsletter input {
+    width: 90%;
+
+    height: 72px;
+
+    border: 1px solid #c89e00;
+
+    border-radius: 40px;
+
+    background-color: transparent;
+
+    padding: 0 25px;
+
+    color: white;
+
+    font-size: 20px;
+
+    outline: none;
+
+    margin-bottom: 45px;
+}
+
+.newsletter input::placeholder {
+    color: #888;
+}
+
+
+/* SUBMIT BUTTON */
+
+.newsletter button {
+    display: block;
+
+    border: none;
+
+    background-color: #d9a900;
+
+    color: white;
+
+    padding: 20px 60px;
+
+    border-radius: 40px;
+
+    font-size: 21px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.newsletter button:hover {
+    background-color: #b78d00;
+}
+
+
+/* COPYRIGHT */
+
+.copyright {
+    margin-top: 130px;
+
+    color: #777;
+
+    font-size: 18px;
+}
+
+
+/* =====================================
+   FOOTER LINKS
+===================================== */
+
+.footer-links {
+    display: grid;
+
+    grid-template-columns: 0.7fr 1fr 1fr;
+
+    gap: 50px;
+}
+
+
+/* QUICK LINKS */
+
+.quick-links {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 25px;
+
+    font-size: 21px;
+}
+
+.quick-links a {
+    text-decoration: underline;
+}
+
+
+/* FOOTER COLUMN */
+
+.footer-column h3 {
+    font-size: 32px;
+
+    font-weight: 400;
+
+    margin-bottom: 25px;
+}
+
+.footer-column a {
+    display: block;
+
+    font-size: 21px;
+
+    text-decoration: underline;
+
+    margin-bottom: 18px;
+}
+
+.footer-column p {
+    font-size: 20px;
+
+    line-height: 1.8;
+}
+
+
+/* =====================================
+   RESPONSIVE DESIGN
+===================================== */
+
+@media (max-width: 1000px) {
+
+    /* NAVBAR */
+
+    .navbar {
+        height: auto;
+
+        min-height: 85px;
+
+        padding: 20px 25px;
+    }
+
+    .logo {
+        font-size: 28px;
+    }
+
+    .logo-icon {
+        font-size: 28px;
+    }
+
+    .nav-links {
+        gap: 25px;
+    }
+
+    .nav-links a {
+        font-size: 18px;
+    }
+
+    .cart {
+        margin-left: 25px;
+
+        font-size: 25px;
+    }
+
+
+    /* HERO */
+
+    .hero {
+        height: 400px;
+    }
+
+    .hero-content h1 {
+        font-size: 75px;
+    }
+
+
+    /* ABOUT */
+
+    .about-container {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+    .about-title h2 {
+        font-size: 50px;
+    }
+
+
+    /* VALUES */
+
+    .values {
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+    }
+
+
+    /* GROW */
+
+    .grow-section h2 {
+        font-size: 50px;
+    }
+
+    .grow-images {
+        grid-template-columns: 1fr;
+    }
+
+    .grow-image {
+        height: 450px;
+    }
+
+
+    /* CTA */
+
+    .cta-content h2 {
+        font-size: 45px;
+    }
+
+
+    /* FOOTER */
+
+    .footer-container {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-links {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    /* NAVBAR */
+
+    .navbar {
+        flex-wrap: wrap;
+
+        padding: 18px 20px;
+
+        gap: 20px;
+    }
+
+    .logo {
+        font-size: 25px;
+    }
+
+    .nav-links {
+        order: 3;
+
+        width: 100%;
+
+        justify-content: center;
+
+        gap: 20px;
+    }
+
+    .nav-links a {
+        font-size: 16px;
+    }
+
+    .cart {
+        margin-left: auto;
+    }
+
+
+    /* HERO */
+
+    .hero {
+        height: 330px;
+    }
+
+    .hero-content h1 {
+        font-size: 55px;
+    }
+
+
+    /* ABOUT */
+
+    .about-section {
+        padding: 70px 20px;
+    }
+
+    .about-title h2 {
+        font-size: 42px;
+    }
+
+    .about-text {
+        font-size: 19px;
+    }
+
+
+    /* VALUES */
+
+    .value-box h3 {
+        font-size: 27px;
+    }
+
+    .value-box p {
+        font-size: 18px;
+    }
+
+
+    /* GROW */
+
+    .grow-section {
+        padding: 70px 20px;
+    }
+
+    .grow-section h2 {
+        font-size: 40px;
+
+        margin-bottom: 50px;
+    }
+
+    .grow-image {
+        height: 300px;
+    }
+
+
+    /* FARM IMAGE */
+
+    .farm-image-section {
+        padding: 0 20px 70px;
+    }
+
+    .farm-image {
+        height: 350px;
+    }
+
+
+    /* CTA */
+
+    .cta-section {
+        height: 550px;
+
+        padding: 30px 20px;
+    }
+
+    .cta-content h2 {
+        font-size: 35px;
+    }
+
+    .cta-content p {
+        font-size: 19px;
+    }
+
+    .cta-button {
+        padding: 18px 55px;
+
+        font-size: 18px;
+    }
+
+
+    /* FOOTER */
+
+    .footer {
+        padding: 60px 20px 40px;
+    }
+
+    .footer-links {
+        grid-template-columns: 1fr;
+    }
+
+    .newsletter input {
+        width: 100%;
+    }
+
+    .copyright {
+        margin-top: 80px;
+    }
+
+}
